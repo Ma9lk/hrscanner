@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="popup.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<form action="#">
+			<h1>Отправить тест кандидату:</h1>
+			<div class="textarea">
+				<textarea name="text" id="infoCandidate" disabled></textarea>
+					<button type="image">
+						<img class ="img" src="icon/PixelKit.png" alt="" />
+					</button>
+			</div>
+			<p>добавьте комментарий:</p>
+			<div class="comment">
+				<input type="text">
+			</div>
+			<select name="list" id="position" class="list">
+				<option value="Manager">Менеджер</option>
+				<option value="Boss">Директор</option>
+				<option value="Disigner">Дизайнер</option>
+				<option value="Engineer">Инженер</option>
+			</select>
+			<div class="test-button" id="button">
+				<button id="Result" class="btn">Резалт</button>
+				<button id="Tools" class="btn">Тулз</button>
+				<button id="Sales" class="btn">Сэйлс</button>
+				<button id="Logic" class="btn">Логис</button>
+			</div>
+			<div>
+				<button id="withoutTest" class="btn">Добавить без отправки теста</button>
+			</div>
+			<a href="#">перезапустить виджет</a>
+		</form>
+	</div>
+	<script src="popup.js"></script>
+</body>
+</html>
