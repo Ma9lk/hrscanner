@@ -1,0 +1,12 @@
+{
+	"manifest_version": 2,
+	"name": "hrscanner",
+	"description": "hrscanner",
+	"version": "1.0",
+	"browser_action": {      
+		"default_popup": "popup.html"
+	},
+	
+	"icons": { "16": "hsc.png",
+				"48": "hsc.png" }
+}
