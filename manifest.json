@@ -8,5 +8,14 @@
 	},
 	
 	"icons": { "16": "hsc.png",
-				"48": "hsc.png" }
+				"48": "hsc.png" },
+
+	"content_scripts": [
+		{
+		"matches": [
+			"<all_urls>"
+		],
+		"js": ["popup.js"]
+		}
+	]
 }
