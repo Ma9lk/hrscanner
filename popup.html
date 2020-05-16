@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
 	<link rel="stylesheet" href="popup.css">
 	<title>Document</title>
 </head>
@@ -13,13 +12,11 @@
 			<h1>Отправить тест кандидату:</h1>
 			<div class="textarea">
 				<textarea name="text" id="infoCandidate" disabled></textarea>
-					<button type="image">
-						<img class ="img" src="icon/PixelKit.png" alt="" />
-					</button>
+				<button type="image"><img class ="img" src="icon/PixelKit.png" alt="" /></button>
 			</div>
 			<p>добавьте комментарий:</p>
 			<div class="comment">
-				<input type="text">
+				<textarea name="text" ></textarea>
 			</div>
 			<select name="list" id="position" class="list">
 				<option value="Manager">Менеджер</option>
@@ -32,11 +29,9 @@
 				<button id="Tools" class="btn">Тулз</button>
 				<button id="Sales" class="btn">Сэйлс</button>
 				<button id="Logic" class="btn">Логис</button>
-			</div>
-			<div>
 				<button id="withoutTest" class="btn">Добавить без отправки теста</button>
+				<button id="reboot" class="reboot-btn">перезапустить виджет</button>
 			</div>
-			<a href="#">перезапустить виджет</a>
 		</form>
 	</div>
 	<script src="popup.js"></script>
