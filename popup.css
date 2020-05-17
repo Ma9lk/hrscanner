@@ -41,13 +41,13 @@ body {
 	margin: 5px 0px;
 }
 .textarea {
-	width: 350px;
-	height: 120px;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
 	position: relative;
 }
 .textarea textarea {
+	width: 100%;
+	height: 120px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
 	resize: none;
 }
 .textarea button {
@@ -94,10 +94,10 @@ body {
 .btn:hover {
 	background-color: rgba(173, 154, 207, 0.5);
 }
-/* .btn.active {
+.btn.active {
 	background-color: rgb(173, 154, 207);
 	color: #fff;
-} */
+}
 .reboot-btn {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 12px;
