@@ -8,27 +8,34 @@
 </head>
 <body>
 	<div class="container">
-		<form action="#">
+		<form action="#" name="send-form">
 			<h1>Отправить тест кандидату:</h1>
 			<div class="textarea">
-				<textarea name="text" id="infoCandidate" disabled="true"></textarea>
+				<input class="contact" type="text" id="name" disabled="true">
+				<input class="contact" type="text" id="phoneNumber" disabled="true">
+				<input class="contact" type="text" id="email" disabled="true">
+				<input class="contact" type="text" id="city" disabled="true">
+				<input class="contact" type="text" id="age" disabled="true">
+				<!-- <textarea name="text" id="infoCandidate" disabled="true"></textarea> -->
 				<button type="image"><img class ="img" id="img" src="icon/PixelKit.png" alt="" /></button>
 			</div>
 			<p>добавьте комментарий:</p>
 			<div class="comment">
-				<textarea name="text" ></textarea>
+				<textarea name="text" id="comment" disabled="true"></textarea>
 			</div>
 			<select name="list" id="position" class="list">
-				<option value="Manager">Менеджер</option>
-				<option value="Boss">Директор</option>
-				<option value="Disigner">Дизайнер</option>
-				<option value="Engineer">Инженер</option>
+				<option value="manager">Менеджер</option>
+				<option value="boss">Директор</option>
+				<option value="disigner">Дизайнер</option>
+				<option value="engineer">Инженер</option>
+				<option value="interview">Видео-интервью</option>
 			</select>
 			<div class="test-button">
-				<button id="Result" class="btn">Резалт</button>
-				<button id="Tools" class="btn"">Тулз</button>
-				<button id="Sales" class="btn"">Сэйлс</button>
-				<button id="Logic" class="btn"">Логис</button>
+				<button id="result" class="btn">Резалт</button>
+				<button id="tools" class="btn">Тулз</button>
+				<button id="sales" class="btn">Сэйлс</button>
+				<button id="logic" class="btn">Логис</button>
+				<button id="conference" class="btn" style="display: none;">Видео-интервью</button>
 				<button id="withoutTest" class="btn"">Добавить без отправки теста</button>
 				<button id="reboot" class="reboot-btn" >перезапустить виджет</button>
 			</div>
