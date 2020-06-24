@@ -6,6 +6,9 @@
 	"browser_action": {      
 		"default_popup": "popup.html"
 	},
+	"permissions": [
+		"activeTab"
+	],
 	
 	"icons": { "16": "hsc.png",
 				"48": "hsc.png" },
@@ -13,8 +16,10 @@
 	"content_scripts": [
 		{
 		"matches": [
-			"*://*/*"
+			"http://*/*",
+			"https://*/*"
 		],
+		"css": [ "popup.css"],
 		"js": ["popup.js"]
 		}
 	]

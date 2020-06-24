@@ -1,46 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="popup.css">
+	<link rel="stylesheet" href="popup.css" type="text/css">
 	<title>Document</title>
 </head>
+
 <body>
-	<div class="container">
-		<form action="#" name="send-form">
-			<h1>Отправить тест кандидату:</h1>
-			<div class="textarea">
-				<input class="contact" type="text" id="name" disabled="true">
-				<input class="contact" type="text" id="phoneNumber" disabled="true">
-				<input class="contact" type="text" id="email" disabled="true">
-				<input class="contact" type="text" id="city" disabled="true">
-				<input class="contact" type="text" id="age" disabled="true">
-				<!-- <textarea name="text" id="infoCandidate" disabled="true"></textarea> -->
-				<button type="image"><img class ="img" id="img" src="icon/PixelKit.png" alt="" /></button>
+	<div class="popup-notice" id="notice" style="display: none;">
+		<p></p>
+	</div>
+	<div class="hrsc-wrapper">
+		<div class="hrsc-container">
+			<div class="hrsc-submit-form" id="submit-form">
+				<a href="#setting" id="setting-icon">
+					<img class="hrsc-cogwheel" src="/icon/cogwheel.png" alt="Настройки" />
+				</a>
+				<h1>Отправить тест кандидату:</h1>
+				<div class="submit-form__bio hrsc-border" id="contact">
+					<div class=input-wrapper>
+						<input placeholder="ФИО" class="submit-form__contact" type="text" id="name" disabled>
+					</div>
+					<div class=input-wrapper>
+						<input placeholder="Телефон" class="submit-form__contact" type="text" id="phoneNumber" disabled>
+					</div>
+					<div class=input-wrapper>
+						<input placeholder="E-mail" class="submit-form__contact" type="text" id="email" disabled>
+					</div>
+					<div class=input-wrapper>
+						<input placeholder="Город" class="submit-form__contact" type="text" id="city" disabled>
+					</div>
+					<div class=input-wrapper>
+						<input placeholder="Возраст" class="submit-form__contact" type="text" id="age" disabled>
+					</div>
+				</div>
+				<p>добавьте комментарий:</p>
+				<div class="submit-form__comment hrsc-border">
+					<textarea placeholder="Комментарий" name="text" id="comment"></textarea>
+				</div>
+				<div class="submit-form__list hrsc-border">
+					<select class="select-item" name="list" id="position">
+						<option value="manager">Менеджер</option>
+						<option value="boss">Директор</option>
+						<option value="disigner">Дизайнер</option>
+						<option value="engineer">Инженер</option>
+						<option value="interview">Видео-интервью</option>
+					</select>
+				</div>
+				<div class="submit-form__buttons" id="buttons">
+					<button id="result" class="hrsc-ready hrsc-btnn send">
+						<div class="message submit-message">
+							<span class="button-text">Резалт</span>
+						</div>
+						<div class="message loading-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+								<circle class="loading-circle" cx="2.2" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="9.5" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="16.8" cy="10" r="1.6" />
+							</svg>
+						</div>
+						<div class="message success-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+								<polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 " />
+							</svg>
+						</div>
+					</button>
+					<button id="tools" class="hrsc-ready hrsc-btnn send">
+						<div class="message submit-message">
+							<span class="button-text">Тулс</span>
+						</div>
+						<div class="message loading-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+								<circle class="loading-circle" cx="2.2" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="9.5" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="16.8" cy="10" r="1.6" />
+							</svg>
+						</div>
+						<div class="message success-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+								<polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 " />
+							</svg>
+						</div>
+					</button>
+					<button id="sales" class="hrsc-ready hrsc-btnn send">
+						<div class="message submit-message">
+							<span class="button-text">Сэйлс</span>
+						</div>
+						<div class="message loading-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+								<circle class="loading-circle" cx="2.2" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="9.5" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="16.8" cy="10" r="1.6" />
+							</svg>
+						</div>
+						<div class="message success-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+								<polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 " />
+							</svg>
+						</div>
+					</button>
+					<button id="logic" class="hrsc-ready hrsc-btnn send">
+						<div class="message submit-message">
+							<span class="button-text">Логис</span>
+						</div>
+						<div class="message loading-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+								<circle class="loading-circle" cx="2.2" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="9.5" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="16.8" cy="10" r="1.6" />
+							</svg>
+						</div>
+						<div class="message success-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+								<polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 " />
+							</svg>
+						</div>
+					</button>
+					<button id="conference" class="hrsc-ready hrsc-btnn send">
+						<div class="message submit-message">
+							<span class="button-text">Видео-интервью</span>
+						</div>
+						<div class="message loading-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+								<circle class="loading-circle" cx="2.2" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="9.5" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="16.8" cy="10" r="1.6" />
+							</svg>
+						</div>
+						<div class="message success-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+								<polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 " />
+							</svg>
+						</div>
+					</button>
+					<button id="withoutTest" class="hrsc-ready hrsc-btnn">
+						<div class="message submit-message">
+							<span class="button-text">Добавить без отправки теста</span>
+						</div>
+						<div class="message loading-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+								<circle class="loading-circle" cx="2.2" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="9.5" cy="10" r="1.6" />
+								<circle class="loading-circle" cx="16.8" cy="10" r="1.6" />
+							</svg>
+						</div>
+						<div class="message success-message">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+								<polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 " />
+							</svg>
+						</div>
+					</button>
+					<!-- <button class="confetti-button">Готово!</button> -->
+				</div>
+				<div class="submit-form__checktest" id="checktest">Кандидат ранее не проходил тестирования
+					<div class="submit-form__icons" id="icons">
+						<div class="test-ref" id="test-ref" style="display: none;">
+							<a href="#" target="_blank">P
+							</a>
+						</div>
+						<div class="test-ref" style="display: none;">
+							<a href="#" target="_blank">T</a>
+						</div>
+						<div class="test-ref" style="display: none;">
+							<a href="#" target="_blank">C</a>
+						</div>
+						<div class="test-ref" style="display: none;">
+							<a href="#" target="_blank">L</a>
+						</div>
+						<div class="test-ref" style="display: none;">
+							<a href="#" target="_blank">V</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<p>добавьте комментарий:</p>
-			<div class="comment">
-				<textarea name="text" id="comment" disabled="true"></textarea>
+			<div class="setting-form">
+				<div class="setting-form__header" id="setting">
+					<a href="#submit-form" id="arrow-icon">Вернуться на главный экран
+						<img class="arrow" src="/icon/arrow.png" alt="Стрелка" />
+					</a>
+					<div class="setting-form__lang">
+						<p>Выберите язык:</p>
+						<select name="language" id="language" class="language">
+							<option value="ru">Русский</option>
+							<option value="en">English</option>
+							<option value="ru">Latviešu</option>
+						</select>
+					</div>
+					<div class="setting-form__box" id="checkbox">
+						<p>Выберите тестирование для отправки:</p>
+						<div class="checkbox-style">
+							<input class="checkbox" checked type="checkbox" id="check1" value="result"><label for="check1">Резалт</label>
+						</div>
+						<div class="checkbox-style">
+							<input class="checkbox" checked type="checkbox" id="check2" value="tools"><label for="check2">Тулс</label>
+						</div>
+						<div class="checkbox-style">
+							<input class="checkbox" checked type="checkbox" id="check3" value="sales"><label for="check3">Сейлс</label>
+						</div>
+						<div class="checkbox-style">
+							<input class="checkbox" checked type="checkbox" id="check4" value="logic"><label for="check4">Логис</label>
+						</div>
+						<div class="checkbox-style">
+							<input class="checkbox" checked type="checkbox" id="check5" value="video"><label for="check5">Видео-интервью</label>
+						</div>
+					</div>
+					<div>
+						<button id="reboot" class="reboot-btnn">Перезапустить виджет</button>
+					</div>
+				</div>
 			</div>
-			<select name="list" id="position" class="list">
-				<option value="manager">Менеджер</option>
-				<option value="boss">Директор</option>
-				<option value="disigner">Дизайнер</option>
-				<option value="engineer">Инженер</option>
-				<option value="interview">Видео-интервью</option>
-			</select>
-			<div class="test-button">
-				<button id="result" class="btn">Резалт</button>
-				<button id="tools" class="btn">Тулз</button>
-				<button id="sales" class="btn">Сэйлс</button>
-				<button id="logic" class="btn">Логис</button>
-				<button id="conference" class="btn" style="display: none;">Видео-интервью</button>
-				<button id="withoutTest" class="btn"">Добавить без отправки теста</button>
-				<button id="reboot" class="reboot-btn" >перезапустить виджет</button>
-			</div>
-		</form>
+			<canvas id="canvas"></canvas>
+		</div>
 	</div>
 	<script src="popup.js"></script>
 </body>
+
 </html>
