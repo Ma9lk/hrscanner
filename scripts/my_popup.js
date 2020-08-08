@@ -19,12 +19,7 @@ let btnSend = getClassName('.send')
 			})
 		}
 
-// При добавлении пройденных тестов смена "Кандидат ранее не проходил тестирования" на "Пройденные тесты"
-// let checktest = getId('checktest')
-// 	checktest.addEventListener('click', function () {
-// 		checktest.innerHTML = 'Пройденные тесты:'
-// 		console.log(checktest)
-// 	})
+
 
 
 // Input enable/disable
