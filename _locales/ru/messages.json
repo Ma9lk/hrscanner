@@ -1,0 +1,60 @@
+{
+  "app_name": {
+    "message": "HH2HRS sender"
+  },
+  "app_description": {
+    "message": "Расширение для отправки кандидатов в систему Hrscanner"
+  },
+  "toolbar_button": {
+    "message": "Добавление резюме и соискателей в Hrscanner.ru"
+  },
+
+  "non_test_btn": {
+    "message": "Добавить без отправки теста"
+  },
+  "comment_inp": {
+    "message": "комментарий:"
+  },
+  "city_inp": {
+    "message": "город:"
+  },
+  "age_inp": {
+    "message": "возраст:"
+  },
+  "phone_inp": {
+    "message": "телефон:"
+  },
+  "email_inp": {
+    "message": "email:"
+  },
+  "name_inp": {
+    "message": "имя:"
+  },
+  "send_test_span": {
+    "message": "Отправьте тест:"
+  },
+  "send_test2_span": {
+    "message": "или просто"
+  },
+  "clear_cache_btn": {
+    "message": "Перезапустить виджет"
+  },
+  "clear_cache1_btn": {
+    "message": "Виджет перезапущен"
+  },
+  "participant_exist": {
+    "message": "Кандидат уже был добавлен ранее"
+  },
+  "incorrect_data": {
+    "message": "Некорректные данные"
+  },
+  "participant_added": {
+    "message": "Кандидат добавлен"
+  },
+  "test_sended": {
+    "message": "Тест отправлен"
+  },
+  "send_error":{
+    "message": "Ошибка отправки"
+  }
+}

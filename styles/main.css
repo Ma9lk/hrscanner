@@ -1,0 +1,208 @@
+.hrs__wrap_0 {
+    position: relative;
+    float: right;
+    top: 30px;
+    right: 0px;
+    width: 230px;
+}
+
+.hrs__wrap_hfl { /* huntflow */
+    float: right;
+    width: 230px;
+    right: 20px;
+    top: 15px;
+    background: white;
+    border: 1px solid grey;
+    height: 200px;
+    padding: 5px;
+    padding-left: 10px;
+    position: absolute;
+
+    border-radius: 4px;
+}
+
+.hider__btn {
+    font-size: 10px;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 19px;
+    z-index: 1;
+    background: white;
+}
+
+.hider__btn.hide {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid;
+    top: 2px;
+    right: 55px;
+    color: white;
+    /*background-color: #337ab7;*/
+    /*padding: 2px 15px 3px 15px;*/
+    /*border-radius: 4px;*/
+
+    padding: 5px 6px 0px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+.hrs__wrap_0 button.non_test {
+	width:180px;
+	background:#337ab7;
+	color:white;
+	border-radius: 5px;
+}
+.hrs__wrap_0 button.non_test:hover {
+    color: #337ab7;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.hrs__wrap_hfl button.non_test {/*hunterflow*/
+    width:180px;
+    background:#337ab7;
+    color:white;
+    border-radius: 5px;
+}
+.hrs__wrap_hfl button.non_test:hover {/*hunterflow*/
+    color: #337ab7;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.hrs__wrap_1 {
+    margin-top: -201px;
+    margin-left: -250px;
+}
+
+.hrs__wrap_1 button.non_test {
+    margin-top: 40px;
+	width:180px;
+	background:#337ab7;
+	color:white;
+	border-radius: 5px;
+}
+
+.vac-select {
+    width:188px;
+    margin-top: 10px;
+    float: left;
+}
+
+.hrs__wrap_1 button.non_test:hover {
+	color: #337ab7;
+	background-color: white;
+	border-radius: 5px;
+}
+
+
+.hrs__tests_block {
+	margin-top: 30px;
+	width: 180px;
+	display: grid;
+	grid-template-columns: 30px 30px 30px 30px;
+	grid-gap: 20px;
+	background-color: #fff;
+	color: #444;
+}
+
+.test_regard, .test_resalt, .test_tools, .test_sails, .test_logis, .test_vi {
+    border: none;
+    display: inline-block;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/images/testCover.png');
+    height: 23px;
+    width: 23px;
+    font-size: 14px;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    line-height: 26px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #999;
+    background-color: white;
+    font-weight: bold;
+    opacity: 0.4;
+}
+
+.test_regard:hover, .test_resalt:hover, .test_tools:hover, .test_sails:hover, .test_logis:hover, .test_vi:hover {
+    color: #337ab7;
+}
+
+.auth_popup {
+	display: block;
+	padding: 5px;
+	z-index: 1;
+	bottom: 1.5em;
+	left: 1em;
+	background: #337ab7;
+	width: 120px;
+
+
+    height: 45px;
+    position: fixed;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    opacity:0.4;
+    transition:0.4s;
+}
+
+.auth_popup:hover {
+    opacity:1;
+}
+
+.auth_popup .popup_content {
+    position:relative;
+}
+
+a.auth-link {
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+}
+
+a.auth-link:active, a.auth-link:hover {
+    color:white;
+    text-decoration:none;
+}
+
+.auth_popup span.close {
+	position: relative;
+	right: auto;
+	top: 5px;
+	font-size: 8px;
+	color: black;
+}
+
+.backhh_popup {
+    width: 150px;
+    /*height: 34px;*/
+    min-width:34px;
+    height: auto;
+    background: #337ab7;
+    position: fixed;
+    color: white;
+    bottom: 5%;
+    left: 3%;
+    padding: 7px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    opacity:0.4;
+    transition:0.4s;
+}
+
+.backhh_popup span.close {
+    opacity: 0.9;
+    font-size: 18px;
+    top: -15px;
+    right: -11px;
+    position:absolute;
+}
+

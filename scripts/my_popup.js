@@ -8,11 +8,10 @@ const getClassName = (className) => {
 	return elClass
 }
 
-// Перезагрузка виджета
-// getId('reboot').onclick = () => {window.location.reload()}
 
 // Выбор тестов для отправки, которые будут показаны
 let checkbox = getClassName('.checkbox')
+let btnSend = getClassName('.send')
 	for (let i=0; i<checkbox.length; i++) {
 		checkbox[i].addEventListener('click', function () {
 			let checked = this.toggleAttribute('checked')
@@ -21,69 +20,39 @@ let checkbox = getClassName('.checkbox')
 		}
 
 // При добавлении пройденных тестов смена "Кандидат ранее не проходил тестирования" на "Пройденные тесты"
-let checktest = getId('checktest')
-	checktest.addEventListener('click', function () {
-		checktest.innerHTML = 'Пройденные тесты:'
-		console.log(checktest)
-	})
+// let checktest = getId('checktest')
+// 	checktest.addEventListener('click', function () {
+// 		checktest.innerHTML = 'Пройденные тесты:'
+// 		console.log(checktest)
+// 	})
 
 
 // Input enable/disable
 let contacts = getClassName('.submit-form__contact')
 let inputWrapper = getClassName('.input-wrapper')
 	for (let i=0; i<inputWrapper.length; i++) {
-		inputWrapper[i].addEventListener('click', function() {
-			for (let c = 0; c < contacts.length; c++) {
-				contacts[c].removeAttribute('disabled')
-				contacts[c].classList.remove('enable')
-			}
+			inputWrapper[i].addEventListener('click', function() {
+				for (let c = 0; c < contacts.length; c++) {
+					contacts[c].removeAttribute('disabled')
+					contacts[c].classList.remove('enable')
+				}
 			contacts[i].getAttribute('disabled')
 			contacts[i].classList.add('enable')
 			contacts[i].focus()
-		})	
-	}	
+			})
+		
+	}
 
-
-
-// ==========================================================
-
-// Задержка всплывающих уведомлений
-let delayNotice = () => {
-	setTimeout(function () {
-		notice.style.display = 'block'
-		}, 7000)
-	setTimeout(function () {
-		notice.style.display = 'none'
-		}, 9000)
-}
-
-// Тест отправлен
-let messageElem = document.querySelector('p')
-let btnSend = getClassName('.send')
-let notice = getId('notice')
-	for (let send of btnSend) {
-		send.addEventListener('click', function () {
-			let clicked = this.getAttribute('data-clicked')
-			!clicked && this.setAttribute('data-clicked', 1)
-			messageElem.innerHTML = clicked ? 'Вы уже отправили' : 'Тест отправлен' 
-				delayNotice()
-				})
-			}
-
-// Кандидат добавлен
-const btnAdded = getId('withoutTest')
-	btnAdded.addEventListener('click', function () {
-		let clicked = this.getAttribute('data-clicked')
-		!clicked && this.setAttribute('data-clicked', 1)
-		messageElem.innerHTML = clicked ? 'Вы уже добавили' : 'Кандидат добавлен' 
-			delayNotice()
+for (let contact of contacts){
+	contact.addEventListener('focusout', function() {
+		contact.getAttribute('disabled')
+		contact.classList.remove('enable')
 		})
+	}
 
-// ==========================================================
-
-// Псведоэкран
+// Пвседоэкран
 let settingIcon = getId('setting-icon')
-let submitForm = document.querySelector('.submit-form')
+let submitForm = document.querySelector('.hrsc-submit-form')
 let arrowIcon = getId('arrow-icon')
 let setting = getId('setting')
 	settingIcon.addEventListener('click', function() {
@@ -307,8 +276,6 @@ for (let i=0; i<buttons.length; i++) {
 	})
 }
 
-
-
 // re-init canvas if the window size changes
 resizeCanvas = () => {
 	canvas.width = window.innerWidth
@@ -345,10 +312,3 @@ let textElements = document.querySelectorAll('.button-text')
 
 // kick off the render loop
 render()
-
-
-
-
-
-
-

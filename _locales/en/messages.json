@@ -1,0 +1,59 @@
+{
+  "app_name": {
+    "message": "HH2HRS sender"
+  },
+  "app_description": {
+    "message": "Extension for sending participants to Hrscanner system"
+  },
+  "toolbar_button": {
+    "message": "Toolbar button"
+  },
+  "non_test_btn": {
+    "message": "Add without send test"
+  },
+  "comment_inp": {
+    "message": "comment:"
+  },
+  "city_inp": {
+    "message": "city:"
+  },
+  "age_inp": {
+    "message": "age:"
+  },
+  "phone_inp": {
+    "message": "phone:"
+  },
+  "email_inp": {
+    "message": "email:"
+  },
+  "name_inp": {
+    "message": "name:"
+  },
+  "send_test_span": {
+    "message": "Send test:"
+  },
+  "send_test2_span": {
+    "message": "or just"
+  },
+  "clear_cache_btn": {
+    "message": "Reload widget"
+  },
+  "clear_cache1_btn": {
+    "message": "Widget reloaded"
+  },
+  "participant_exist": {
+    "message": "Parcitipant already exist"
+  },
+  "incorrect_data": {
+    "message": "Incorrect data"
+  },
+  "participant_added": {
+    "message": "Participant added"
+  },
+  "test_sended": {
+    "message": "Test sended"
+  },
+  "send_error":{
+    "message": "Send error"
+  }
+}

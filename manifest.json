@@ -1,26 +1,61 @@
 {
-	"manifest_version": 2,
-	"name": "hrscanner",
-	"description": "hrscanner",
-	"version": "1.0",
-	"browser_action": {      
-		"default_popup": "popup.html"
-	},
-	"permissions": [
-		"activeTab"
-	],
-	
-	"icons": { "16": "hsc.png",
-				"48": "hsc.png" },
+  "manifest_version": 2,
+  "name": "Hrscanner",
+  "short_name": "hrs",
+  "description": "Добавляйте соискателей в свой личный кабинет Hrscanner.ru в один клик",
+  "version": "0.9.76",
+  "icons": {
+    "16": "images/hrs_hh.png",
+    "128": "images/hrs_hh.png"
+  },
+  "default_locale": "ru",
+  "permissions": [
+    "tabs",
+    "https://*.hh.ru/*",
+    "https://*.hh.ua/*",
+    "https://*.hh.kz/*",
+    "https://*.hh.by/*",
+    "https://*.hh.uz/*",
+    "https://career.ru/*",
+    "https://jobs.tut.by/*",
+    "https://jobs.day.az/*",
+    "https://headhunter.ge/*",
+    "https://headhunter.kg/*",
+    "https://huntflow.ru/*",
 
-	"content_scripts": [
-		{
-		"matches": [
-			"http://*/*",
-			"https://*/*"
-		],
-		"css": [ "popup.css"],
-		"js": ["popup.js"]
-		}
-	]
+    "https://*.hrscanner.ru/*",
+    "storage",
+    "browsingData"
+  ],
+  "web_accessible_resources": [
+    "images/testCover.png"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "images/hrs_hh.png",
+      "38": "images/hrs_hh.png"
+    },
+    "default_title": "__MSG_toolbar_button__",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "css": [
+        "styles/main.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ]
 }

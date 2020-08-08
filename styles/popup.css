@@ -1,3 +1,60 @@
+/* body {
+	text-align: center;
+}
+
+.perspective {
+	perspective: 800px;
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+.btn {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin: 15px 30px;
+	padding: 25px 80px;
+	min-width: 320px;
+	font-size: 20px;
+	position: relative;
+	background: #5cbcf6;
+	transition: all 0.3s;
+	display: inline-block;
+}
+
+.btn-animated {
+	transform-style: preserve-3d;
+}
+.btn-animated:before, .btn-animated:after {
+	content: attr(data-msg);
+	left: 0;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	line-height: 35px;
+	position: absolute;
+}
+.btn-animated:before {
+	top: 100%;
+	color: #a33a3a;
+	background: #e96a6a;
+	transform-origin: 0% 0%;
+	transform: rotateX(-90deg);
+}
+.btn-animated:after {
+	top: -98%;
+	color: #358337;
+	background: #7aca7c;
+	transform: rotateX(90deg);
+	transform-origin: 0% 100%;
+}
+.btn-animated.btn-success {
+	background: #aaa;
+	transform-origin: 50% 100%;
+	transform: rotateX(-90deg) translateY(100%);
+}
+ */
+
 /*Обнуление*/
 * {
 	padding: 0;
@@ -77,11 +134,11 @@ h6 {
 
 @font-face {
 	font-family: Montserrat;
-	src: url(fonts/Montserrat-regular.ttf);
+	src: url(../fonts/Montserrat-regular.ttf);
 }
 
 
-.popup-notice {
+.message-content {
 	position: absolute;
 	width: 303px;
 	height: 35px;
@@ -105,11 +162,11 @@ h6 {
 	}
 }
 
-.popup-notice p {
-	font-size: 18px;
+.message-content p {
+	font-size: 16px;
 	text-align: center;
 	font-family: Montserrat;
-	line-height: 1.85;
+	line-height: 2.2;
 }
 .hrsc-wrapper {
 	display: flex;
@@ -198,9 +255,10 @@ h6 {
 .submit-form__list {
 	margin: 10px 0px;
 }
-.select-item {
-	width: 100%;
-	border: 1px solid #fff;
+.vac-select {
+	margin: 10px 0px;
+	width: 100.5%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	height: 25px;
 	font-family: Montserrat;
@@ -226,10 +284,10 @@ h6 {
 	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: bolder;
-	margin: 0 2px 10px 2px;
+	margin: 0 2px 10px 3px;
 }
 .hrsc-btnn:nth-child(5) {
-	width: 145px;
+	width: 140px;
 }
 .hrsc-btnn:last-child {
 	width: 235px;
@@ -257,8 +315,34 @@ h6 {
 	justify-content: space-between;
 }
 
+/* .test_resalt, .test_regard, .test_tools, .test_sails, .test_logis, .test_vi {
+	border: none;
+	display: inline-block;
+	background-image: url(/images/testCover.png);
+	line-height: 26px;
+	background-color: white;
+	margin-left: 5px;
+	opacity: 0.5;
+	height: 23px;
+	width: 23px;
+	text-align: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-right: 1px;
+}
+
+.test_resalt .completed, .test_regard.completed, .test_tools.completed, .test_sails.completed, .test_logis.completed, .test_vi.completed {
+	background-image: url(/images/testCover2.png);
+	color:white;
+	opacity:1;
+	font-family: 'Arial';
+	display:none;
+}
+
+.test_resalt :hover:not(.completed), .test_regard:hover:not(.completed), .test_tools:hover:not(.completed), .test_sails:hover:not(.completed), .test_logis:hover:not(.completed), .test_vi:hover:not(.completed) {
+	color: #337ab7;
+} */
 .test-ref {
-	display: none;
 	background-image: url(/icon/list.png);
 	opacity: 0.5;
 	height: 23px;
@@ -440,4 +524,5 @@ canvas {
 .loading-circle:nth-child(3) {
 	animation-delay: 0.2s;
 }
+
 

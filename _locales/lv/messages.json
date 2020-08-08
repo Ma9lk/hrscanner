@@ -1,0 +1,59 @@
+{
+  "app_name": {
+    "message": "HH2HRS sūtītājs"
+  },
+  "app_description": {
+    "message": "Paplašinājums dalībnieku nosūtīšanai uz Hrscanner sistēmu"
+  },
+  "toolbar_button": {
+    "message": "Rīkjoslas poga"
+  },
+  "non_test_btn": {
+    "message": "Nosūtīt Hrscanner"
+  },
+  "comment_inp": {
+    "message": "Komentārs:"
+  },
+  "city_inp": {
+    "message": "Pilsēta:"
+  },
+  "age_inp": {
+    "message": "Vecums:"
+  },
+  "phone_inp": {
+    "message": "tālrunis:"
+  },
+  "email_inp": {
+    "message": "E-pasts:"
+  },
+  "name_inp": {
+    "message": "nosaukums:"
+  },
+  "send_test_span": {
+    "message": "Nosūtīt pārbaudi:"
+  },
+  "send_test2_span": {
+    "message": "vai tikai"
+  },
+  "clear_cache_btn": {
+    "message": "Notīrīt kešatmiņu"
+  },
+  "clear_cache1_btn": {
+    "message": "Kešatmiņa ir iztīrīta"
+  },
+  "participant_exist": {
+    "message": "Parcitipant jau pastāv"
+  },
+  "incorrect_data": {
+    "message": "Nepareizi dati"
+  },
+  "participant_added": {
+    "message": "Dalībnieks pievienots"
+  },
+  "test_sended": {
+    "message": "Tests nosūtīts"
+  },
+  "send_error":{
+    "message": "Sūtīšanas kļūda"
+  }
+}
